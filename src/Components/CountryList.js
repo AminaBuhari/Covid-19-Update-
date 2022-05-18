@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getCountry } from '../Redux/Country';
+import { getCountry } from '../Redux/country/Country';
 
 const backicon = require('../assets/less.png');
 const settings = require('../assets/setting.png');
