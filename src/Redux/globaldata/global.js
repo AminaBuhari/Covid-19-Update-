@@ -19,13 +19,13 @@ export const globalData = (apiData) => {
       {
         date: key,
         todayConfirmed: Object.entries(value.countries).map(
-          ([key, value]) => (value.today_new_confirmed),
+          ([value]) => (value.today_new_confirmed),
         ).reduce((a, b) => a + b, 0),
         todayDeath: Object.entries(value.countries).map(
-          ([key, value]) => (value.today_new_deaths),
+          ([value]) => (value.today_new_deaths),
         ).reduce((a, b) => a + b, 0),
         todayRecovered: Object.entries(value.countries).map(
-          ([key, value]) => (value.today_new_recovered),
+          ([value]) => (value.today_new_recovered),
         ).reduce((a, b) => a + b, 0),
         source: 'John Hopkins Hospital',
 

@@ -21,7 +21,7 @@ function Country(props) {
       type="button"
       style={{ backgroundImage: `url(${process.env.PUBLIC_URL}https://i.ibb.co/Q9Wmxw9/realSize.png)` }}
     >
-      <div className = "countryImage">
+      <div className="countryImage">
         <h4>{name}</h4>
         <p>
           {confirmedCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
@@ -38,4 +38,3 @@ Country.propTypes = {
   confirmedCases: PropTypes.number.isRequired,
 };
 export default Country;
-

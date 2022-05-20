@@ -5,8 +5,6 @@ const REGIONS = 'covidtracking/region/REGIONS';
 const RESET = 'covid19traking/countries/RESET';
 const RESET_COUNTRY_DETAILS = 'covid19traking/countries/RESET_COUNTRY_DETAILS';
 
-
-
 const initialState = [];
 export const countryReducer = (state = initialState, action = {}) => {
   switch (action.type) {
@@ -26,9 +24,9 @@ export const countryReducer = (state = initialState, action = {}) => {
   }
 };
 
-
 export function countries(apiData, date) {
-  const formatApiData = Object.entries(apiData.dates[date].countries).map(([key, value]) => ({ ...value, country: key }));
+  const formatApiData = Object.entries(apiData.dates[date].countries)
+    .map(([key, value]) => ({ ...value, country: key }));
   return {
     type: COUNTRIES,
     countries: formatApiData,
@@ -51,7 +49,7 @@ export const getRegions = (date, country) => (dispatch) => {
   setTimeout(async () => {
     const response = await ApiData.getRegions(date, country);
     dispatch(regions(response, { date, country }));
-  }, 100 );
+  }, 100);
 };
 
 export const reset = () => ({
@@ -61,6 +59,3 @@ export const reset = () => ({
 export const resetCountryDetails = () => ({
   type: RESET_COUNTRY_DETAILS,
 });
-
-
-

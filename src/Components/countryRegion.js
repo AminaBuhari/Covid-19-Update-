@@ -6,8 +6,8 @@ function Region(props) {
 
   return (
     <div className="region">
-      <h11>{name}</h11>
-      <h12>
+      <h11 className="h11">{name}</h11>
+      <h12 className="h12">
         {confirmedCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
         {' '}
         Cases

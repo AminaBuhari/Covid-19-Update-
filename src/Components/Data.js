@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reset } from '../Redux/country/Country';
 
@@ -32,7 +33,8 @@ const Data = (props) => {
 
         </p>
         <p>
-          Source
+          Source:-
+          {' '}
           {' '}
           {source}
 
@@ -41,5 +43,13 @@ const Data = (props) => {
       </div>
     </button>
   );
+};
+
+Data.propTypes = {
+  date: PropTypes.string.isRequired,
+  confirmedCases: PropTypes.number.isRequired,
+  confirmedDeath: PropTypes.number.isRequired,
+  confirmedRecovered: PropTypes.number.isRequired,
+  source: PropTypes.string.isRequired,
 };
 export default Data;

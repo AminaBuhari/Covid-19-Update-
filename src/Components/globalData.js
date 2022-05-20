@@ -24,4 +24,5 @@ function GlobalData() {
     </div>
   );
 }
+
 export default GlobalData;

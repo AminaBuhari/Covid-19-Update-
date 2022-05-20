@@ -1,105 +1,94 @@
-.headerBody{
-    display: flex;
-    justify-content: space-between;
-    z-index:  100;
-    position:fixed;
-    width: 100%;
-    padding: 0 16px;
-    align-items: center;
-    background-color: #bc2b54;
+.headerBody {
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  padding: 0 16px;
+  align-items: center;
+  background-color: #bc2b54;
 
-    img {
-        width: 20px; 
-        align-self: center;
-        padding-top: 6px;
-    }
+  img {
+    width: 20px;
+    align-self: center;
+    padding-top: 6px;
+  }
 
-    button{
-        border-style: none;
-        background-color: transparent;
-    }
+  button {
+    border-style: none;
+    background-color: transparent;
+  }
 
-    p {
-      font-size: 25px;
-      color: white;
-      font-weight: 500;
-    }
+  p {
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+  }
 
-    span{
-        font-size: 13px;
-    }
+  span {
+    font-size: 13px;
+  }
 
-    ul{
-        padding: 0; 
-        margin: 0; 
-    }
-
-   
+  ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .countryWrap {
-    display: flex; 
-    flex-wrap: wrap;
-    padding-top: 82px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 82px;
 
-    button{
-        width: 25%; 
-        position: relative; 
-        background-color: #d95077;
-        color: white;
+  button {
+    width: 25%;
+    position: relative;
+    background-color: #d95077;
+    color: white;
+  }
 
-       
-        
+  button:nth-of-type(8n+2),
+  button:nth-of-type(8n+4),
+  button:nth-of-type(8n+5),
+  button:nth-of-type(8n+7) {
+    background-color: #bc2b54;
+  }
 
+  @media (max-width: 480px) {
+    button {
+      width: 50%;
     }
 
     button:nth-of-type(8n+2),
     button:nth-of-type(8n+4),
     button:nth-of-type(8n+5),
     button:nth-of-type(8n+7) {
-    background-color:#bc2b54;
+      background-color: #d95077;
     }
 
-    @media (max-width: 480px) {
-        button {
-          width: 50%;
-          margin: auto;
-          padding: auto;
-        }
-
-        button:nth-of-type(8n+2),
-        button:nth-of-type(8n+4),
-        button:nth-of-type(8n+5),
-        button:nth-of-type(8n+7) {
-          background-color:#d95077
-        }
-      
-        button:nth-child(4n+1),
-        button:nth-child(4n) {
-          background-color:#bc2b54;
-        }
-       
-      
+    button:nth-child(4n+1),
+    button:nth-child(4n) {
+      background-color: #bc2b54;
+    }
   }
-
-  
 }
 
 .countryLink {
   background-repeat: no-repeat;
 }
-.countryImage{
-  margin:100px 10px 10px 0px;
+
+.countryImage {
+  margin: 100px 10px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: end;
 
-  h4{
+  h4 {
     font-size: 24px;
     margin-bottom: 0;
-
   }
-   p {
-     margin-top: 0;
-   }
+
+  p {
+    margin-top: 0;
+  }
 }

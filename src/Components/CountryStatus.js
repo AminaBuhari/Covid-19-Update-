@@ -44,7 +44,7 @@ function CountryDetails() {
                   Total Cases
                 </p>
               </div>
-              <div className='introos'>
+              <div className="introos">
                 <p className="aboutc">
                   {countryDetails ? countryDetails.today_new_confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
                   {' '}
@@ -54,24 +54,24 @@ function CountryDetails() {
                   Cases Today
                 </p>
               </div>
-               <div className='introos'>
-              <p className="aboutc">
-                {countryDetails ? countryDetails.today_new_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-                {' '}
-              </p>
-              <p className="aboutReg">
-                Deaths
-              </p>
+              <div className="introos">
+                <p className="aboutc">
+                  {countryDetails ? countryDetails.today_new_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                  {' '}
+                </p>
+                <p className="aboutReg">
+                  Deaths
+                </p>
               </div>
-              <div className='introos'>
+              <div className="introos">
 
-              <p className="aboutc">
-                {countryDetails ? countryDetails.today_new_recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-                {' '}
-              </p>
-              <p className="aboutReg">
-                Recovered
-              </p>
+                <p className="aboutc">
+                  {countryDetails ? countryDetails.today_new_recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                  {' '}
+                </p>
+                <p className="aboutReg">
+                  Recovered
+                </p>
               </div>
             </div>
 
