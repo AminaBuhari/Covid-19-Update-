@@ -5,8 +5,7 @@
   background-color: #bc2b54;
   color: #fff;
   padding: 0;
-  position: fixed;
-  z-index: 100;
+
   width: 100%;
 
   button{
@@ -28,10 +27,20 @@
   }
 
   h4{
-      padding-right: 82px;
       font-size: 15px;
+      text-align: center;
   }
 
+  @media (max-width: 480px) {
+      h4{
+          padding-right: 73px;
+      }
+    
+ }
+
+
+ 
+
 
 
 
@@ -42,21 +51,50 @@
 
 }
 
-
-.content{
-    background-color:  #d95077;
-}
-
-.introRegion {
+.content {
     display: flex;
     gap: 5px;
-    padding-left: 10px;
+    padding-right: 40px;
     justify-content: center;
-    background-color:#d95077;
+    background-color:#bc2b54;
+    padding-top: 0;
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-position-x: 18%;
+    flex-direction: column;
+    padding-bottom: 40px;
+    
+  z-index: 100;
+  width: 100%;
+
+  .intros{
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .introos{
+      display: flex;
+      gap: 5px;
+      padding-right: 100px;
+  }
+   .tiitle{
+    font-size: 35px;
+     margin-top: 0;
+     margin-bottom: 4px;
+     padding-right: 150px;
+     padding-top: 50px;
+    text-align: end;
+    align-self: flex-end;
+   }
+ 
+
+
 
  .aboutc{
-     font-size: 25px;
+     font-size: 19px;
      align-self: center;
+     margin: 0;
   }
 
  .aboutReg{
@@ -64,19 +102,19 @@
      font-size: 15px;
      align-self: center;
      font-weight: 600;
+     margin: 0;
  } 
 }
 
-.content {
-    padding-top: 40px;
-}
+
 
 .heading {
     background-color:#fd1c72;
     color: #fff;
     font-size: 16px;
-    margin-bottom: 0;
     padding-bottom: 0;
+    
+   
 }
 
 .regions-list {
@@ -115,3 +153,15 @@
 .region:nth-child(even){
     background-color:#d95077;
 }
+
+.regionWrap {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
+}
+
+.containerr {
+    padding-top: 290px;
+}
+

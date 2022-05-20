@@ -1,16 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useParams } from 'react-router-dom';
+import { useParams , useNavigate} from 'react-router-dom';
 import Country from './Country';
 import { getCountry } from '../Redux/country/Country';
+
 
 const settings = require('../assets/setting.png');
 const mic = require('../assets/mic.png');
 
 const CountryList = () => {
   const countries = useSelector((state) => state.country.countries);
-  console.log(countries);
+  const navigate = useNavigate();
   const params = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -36,7 +37,7 @@ const CountryList = () => {
         </div>
       </div>
       <ul className = "countryWrap" >
-        { countries ? countries.map((country) => <Country key={country.id} name={country.name} confirmedCases={country.today_new_confirmed} />) : 'Loading'}
+        { countries ? countries.map((country) => <Country key={country.id} name={country.name} confirmedCases={country.today_new_confirmed} />) : 'Loading...'}
       </ul>
     </div>
   );

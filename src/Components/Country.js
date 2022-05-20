@@ -19,9 +19,9 @@ function Country(props) {
         navigate(`/${params.date}/countries/${name}`);
       }}
       type="button"
-      style={{ backgroundImage: 'url(\'/images/map.png\')' }}
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}https://i.ibb.co/Q9Wmxw9/realSize.png)` }}
     >
-      <div>
+      <div className = "countryImage">
         <h4>{name}</h4>
         <p>
           {confirmedCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}

@@ -19,7 +19,7 @@ function GlobalData() {
       <PickDate />
       <h4>Statistics By Date</h4>
       <ul className="global-list">
-        { data ? data.map((data) => <Data key={data.date} date={data.date} confirmedCases={data.todayConfirmed} confirmedDeath={data.todayDeath} confirmedRecovered={data.todayRecovered} source={data.source} />) : 'Loading'}
+        { data ? data.map((data) => <Data key={data.date} date={data.date} confirmedCases={data.todayConfirmed} confirmedDeath={data.todayDeath} confirmedRecovered={data.todayRecovered} source={data.source} />) : 'Loading...'}
       </ul>
     </div>
   );

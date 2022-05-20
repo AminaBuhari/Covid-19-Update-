@@ -16,69 +16,71 @@ function CountryDetails() {
 
   return (
     <div className="container">
-      <nav className="header-region">
-        <div className="back">
-          <button onClick={() => { navigate(`/${params.date}/countries`); }} type="button">
-            <p className="text">
-              <IoIosArrowBack size={18} />
-              <span>Countries</span>
-            </p>
-          </button>
-        </div>
-        <h4 className="page-title">{params.countryName}</h4>
-        <div className="space-div" />
-      </nav>
-      <div className="details-header">
-        <div className="img-bg" style={{ backgroundImage: 'url(\'/images/map.png\')' }} />
-        <div className="content">
-          <h4 className="tiitle">{ countryDetails ? countryDetails.name : 'loading...'}</h4>
-          <div className="introRegion">
-            <p className="aboutc">
-              {countryDetails ? countryDetails.today_confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-              {' '}
-            </p>
-            <p className="aboutReg">
-              Total Cases
-            </p>
+      <div className="regionWrap">
+        <nav className="header-region">
+          <div className="back">
+            <button onClick={() => { navigate(`/${params.date}/countries`); }} type="button">
+              <p className="text">
+                <IoIosArrowBack size={18} />
+                <span>Countries</span>
+              </p>
+            </button>
           </div>
+          <h4 className="page-title">{params.countryName}</h4>
+          <div className="space-div" />
+        </nav>
+        <div className="details-header">
+          <div className="img-bg" />
+          <div className="content" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}https://i.ibb.co/Q9Wmxw9/realSize.png)` }}>
 
-          <div className="introRegion">
-            <p className="aboutc">
-              {countryDetails ? countryDetails.today_new_confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-              {' '}
+            <h4 className="tiitle">{ countryDetails ? countryDetails.name : 'loading...'}</h4>
+            <div className="intros">
+              <div className="introos">
+                <p className="aboutc">
+                  {countryDetails ? countryDetails.today_confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                  {' '}
+                </p>
+                <p className="aboutReg">
+                  Total Cases
+                </p>
+              </div>
+              <div className='introos'>
+                <p className="aboutc">
+                  {countryDetails ? countryDetails.today_new_confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                  {' '}
 
-            </p>
-            <p className="aboutReg">
-              Cases Today
-            </p>
+                </p>
+                <p className="aboutReg">
+                  Cases Today
+                </p>
+              </div>
+               <div className='introos'>
+              <p className="aboutc">
+                {countryDetails ? countryDetails.today_new_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                {' '}
+              </p>
+              <p className="aboutReg">
+                Deaths
+              </p>
+              </div>
+              <div className='introos'>
+
+              <p className="aboutc">
+                {countryDetails ? countryDetails.today_new_recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
+                {' '}
+              </p>
+              <p className="aboutReg">
+                Recovered
+              </p>
+              </div>
+            </div>
 
           </div>
-
-          <div className="introRegion">
-            <p className="aboutc">
-              {countryDetails ? countryDetails.today_new_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-              {' '}
-            </p>
-            <p className="aboutReg">
-              Deaths
-            </p>
-          </div>
-
-          <div className="introRegion">
-            <p className="aboutc">
-              {countryDetails ? countryDetails.today_new_recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : 'loading...'}
-              {' '}
-            </p>
-            <p className="aboutReg">
-              Recovered
-            </p>
-
-          </div>
-
         </div>
       </div>
+
       { countryDetails ? (
-        <>
+        <div className="containerr">
           <div className="heading">
             Country Regions -
             {' '}
@@ -98,7 +100,7 @@ function CountryDetails() {
                    ) : (<p>No Regions Found</p>)
                  }
           </ul>
-        </>
+        </div>
       ) : <p className="details-loading">Loading...</p>}
 
     </div>
