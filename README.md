@@ -13,7 +13,7 @@ To get a local copy up and running follow this simple step:
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://covid-19-update-amina.herokuapp.com/)
 
 # Screenshot
 ![home](https://user-images.githubusercontent.com/66526480/169544508-ee1c94e0-d028-4002-9573-2e6b0dd47574.PNG)
