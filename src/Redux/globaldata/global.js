@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import ApiData from '../Api';
 
 const GLOBAL_DATA = 'covidtracking/global/GLOBAL_DATA';
@@ -19,13 +20,13 @@ export const globalData = (apiData) => {
       {
         date: key,
         todayConfirmed: Object.entries(value.countries).map(
-          ([value]) => (value.today_new_confirmed),
+          ([key, value]) => (value.today_new_confirmed),
         ).reduce((a, b) => a + b, 0),
         todayDeath: Object.entries(value.countries).map(
-          ([value]) => (value.today_new_deaths),
+          ([key, value]) => (value.today_new_deaths),
         ).reduce((a, b) => a + b, 0),
         todayRecovered: Object.entries(value.countries).map(
-          ([value]) => (value.today_new_recovered),
+          ([key, value]) => (value.today_new_recovered),
         ).reduce((a, b) => a + b, 0),
         source: 'John Hopkins Hospital',
 
