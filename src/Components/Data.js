@@ -1,19 +1,43 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { reset } from '../Redux/country/Country';
 
 const Data = (props) => {
-  const { date, confirmedCases } = props;
+  const {
+    date, confirmedCases, confirmedDeath, confirmedRecovered, source,
+  } = props;
   const navigation = useNavigate();
+  const dispatch = useDispatch();
 
   return (
-    <button onClick={() => { navigation(`/${date}/countries`, { replace: true }); }} type="button" style={{ backgroundImage: 'url(images/map.png)' }}>
-      <div>
+    <button className="globalButton" onClick={() => { dispatch(reset()); navigation(`/${date}/countries`); }} type="button" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}https://i.ibb.co/Q9Wmxw9/realSize.png)` }}>
+      <div className="WrapperGlobe">
         <h4>{date}</h4>
         <p>
           {confirmedCases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           {' '}
           Cases
         </p>
+        <p>
+
+          {confirmedDeath.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          {' '}
+          Death ☠
+        </p>
+        <p>
+          {confirmedRecovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          {' '}
+          Recovered
+
+        </p>
+        <p>
+          Source
+          {' '}
+          {source}
+
+        </p>
+
       </div>
     </button>
   );

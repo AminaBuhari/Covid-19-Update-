@@ -1,35 +1,31 @@
 import ApiData from '../Api';
 
 const COUNTRIES = 'covidtracking/countreis/COUNTRIES';
-const LOADING_COUNTRIES = 'covidtracking/countries/LOADING_COUNTRIES';
 const REGIONS = 'covidtracking/region/REGIONS';
+const RESET = 'covid19traking/countries/RESET';
+const RESET_COUNTRY_DETAILS = 'covid19traking/countries/RESET_COUNTRY_DETAILS';
+
 
 
 const initialState = [];
 export const countryReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case LOADING_COUNTRIES:
-      return {
-        ...state, loading: true,
-      };
     case COUNTRIES:
       return {
-        ...state, fetching: false, countries: action.countries,
+        ...state, countries: action.countries,
       };
     case REGIONS:
       return {
         ...state, countryData: action.countryData,
       };
-   
+    case RESET_COUNTRY_DETAILS:
+      return { ...state, countryDetails: undefined };
+    case RESET:
+      return { };
     default: return state;
   }
 };
 
-export function loadingCountries() {
-  return {
-    type: LOADING_COUNTRIES,
-  };
-}
 
 export function countries(apiData, date) {
   const formatApiData = Object.entries(apiData.dates[date].countries).map(([key, value]) => ({ ...value, country: key }));
@@ -40,7 +36,6 @@ export function countries(apiData, date) {
 }
 
 export const getCountry = (date) => async (dispatch) => {
-  dispatch(loadingCountries());
   setTimeout(async () => {
     const response = await ApiData.getCountry(date);
     dispatch(countries(response, date));
@@ -53,14 +48,19 @@ export const regions = (apiData, requestData) => ({
 });
 
 export const getRegions = (date, country) => (dispatch) => {
-  dispatch(loadingCountries());
   setTimeout(async () => {
     const response = await ApiData.getRegions(date, country);
     dispatch(regions(response, { date, country }));
-  }, 1000);
+  }, 100 );
 };
 
+export const reset = () => ({
+  type: RESET,
+});
 
+export const resetCountryDetails = () => ({
+  type: RESET_COUNTRY_DETAILS,
+});
 
 
 

@@ -1,0 +1,117 @@
+.header-region {
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bc2b54;
+  color: #fff;
+  padding: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+
+  button{
+      background-color: transparent;
+      border-style: none; 
+  }
+  .page-title{
+  text-align: center;
+  }
+
+  span {
+      font-size: 12px;
+      align-self: center;
+  }
+
+  .text{
+      display: flex;
+      align-items: center;
+  }
+
+  h4{
+      padding-right: 82px;
+      font-size: 15px;
+  }
+
+
+
+
+ 
+
+ 
+
+
+}
+
+
+.content{
+    background-color:  #d95077;
+}
+
+.introRegion {
+    display: flex;
+    gap: 5px;
+    padding-left: 10px;
+    justify-content: center;
+    background-color:#d95077;
+
+ .aboutc{
+     font-size: 25px;
+     align-self: center;
+  }
+
+ .aboutReg{
+     color: black;
+     font-size: 15px;
+     align-self: center;
+     font-weight: 600;
+ } 
+}
+
+.content {
+    padding-top: 40px;
+}
+
+.heading {
+    background-color:#fd1c72;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.regions-list {
+    background-color: #bc2b54;
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.region {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+
+    h11{
+        margin: 0;
+        color: white;
+        font-size: 20px;
+        font-weight: 0;
+    }
+
+    h12 {
+        margin: 0;
+        color: white;
+        font-size: 16px;
+        font-weight: 0;
+    }
+}
+
+.region:nth-child(odd){
+    background-color:#bc2b54;
+}
+.region:nth-child(even){
+    background-color:#d95077;
+}
