@@ -3,7 +3,7 @@
   "name": "COVID-19 TRACKING WEB APP",
   "icons": [
     {"src":"https://i.ibb.co/61BHG1J/covid-sars.jpg","sizes":"192x192","type":"image/jpg"},
-    {"src":"https://i.ibb.co/61BHG1J/covid-sars.jpg","sizes":"512x512","type":"image/jpgg"}
+    {"src":"https://i.ibb.co/61BHG1J/covid-sars.jpg","sizes":"512x512","type":"image/jpg"}
   ],
   "start_url": ".",
   "display": "standalone",
