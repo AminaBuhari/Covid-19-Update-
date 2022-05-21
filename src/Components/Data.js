@@ -46,7 +46,7 @@ const Data = (props) => {
 };
 
 Data.propTypes = {
-  date: PropTypes.number.isRequired,
+  date: PropTypes.string.isRequired,
   confirmedCases: PropTypes.number.isRequired,
   confirmedDeath: PropTypes.number.isRequired,
   confirmedRecovered: PropTypes.number.isRequired,
