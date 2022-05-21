@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import GlobalData from './Components/globalData';
 
-describe('Global Dta', () => {
+describe('Global Data', () => {
   describe('Region data', () => {
     it('has Text element', () => {
       render(<GlobalData />);
