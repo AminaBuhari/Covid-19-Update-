@@ -62,18 +62,21 @@ ul {
     height: 32px;
     border: 2px solid #fff;
     background-color: #d95077;
+    color: #4b1524;
   }
 
   .input {
-    width: 100%;
+    width: 28%;
     height: 32px;
     background-color: white;
     border: 2px solid white;
     margin-top: 22px;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
+    color: #4b1524;
+    font-size: 17px;
+    font-weight: 600;
   }
+
 
   .globalButton {
     width: 30%;
@@ -83,12 +86,17 @@ ul {
   }
 }
 
+button:focus {
+  color: #4b1524;
+  cursor: pointer;
+}
+
 .global-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px;
-  background-color: #c1e3ff;
+  background-color: #db346c;
 
   .globalButton {
     width: 25%;
@@ -125,6 +133,14 @@ ul {
     .globalButton:nth-child(4n) {
       background-color: #d95077;
     }
+  }
+
+  input {
+    width: 130px;
+  }
+
+  .input {
+    width: 100px;
   }
 }
 

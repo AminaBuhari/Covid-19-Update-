@@ -42,7 +42,7 @@ export const getGlobalData = (dateFrom, dateTo) => async (dispatch) => {
   setTimeout(async () => {
     const response = await ApiData.getGlobalData(dateFrom, dateTo);
     dispatch(globalData(response));
-  }, 100);
+  }, 0);
 };
 
 export const fetching = () => ({

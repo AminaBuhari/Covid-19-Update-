@@ -37,7 +37,7 @@ export const getCountry = (date) => async (dispatch) => {
   setTimeout(async () => {
     const response = await ApiData.getCountry(date);
     dispatch(countries(response, date));
-  }, 1000);
+  }, 100);
 };
 
 export const regions = (apiData, requestData) => ({

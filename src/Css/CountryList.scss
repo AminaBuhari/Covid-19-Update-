@@ -9,14 +9,16 @@
   background-color: #bc2b54;
 
   img {
-    width: 20px;
+    width: 30px;
     align-self: center;
     padding-top: 6px;
+    padding-right: 10px;
   }
 
   button {
     border-style: none;
     background-color: transparent;
+    padding: 0;
   }
 
   p {
@@ -26,7 +28,7 @@
   }
 
   span {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   ul {
@@ -45,6 +47,7 @@
     position: relative;
     background-color: #d95077;
     color: white;
+    padding: 0;
   }
 
   button:nth-of-type(8n+2),
