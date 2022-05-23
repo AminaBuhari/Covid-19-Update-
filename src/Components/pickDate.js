@@ -33,13 +33,13 @@ const PickDate = () => {
         <label htmlFor={dateFrom} placeholder="Date-From">
           Date-From
           <br />
-          <input type="date" id={dateFrom} name="dateFrom" onChange={onChange} value={inputDates.dateFrom} />
+          <input type="date" id={dateFrom} name="dateFrom" size={100} onChange={onChange} value={inputDates.dateFrom} />
         </label>
 
         <label htmlFor="dateTo">
           Date-To
           <br />
-          <input type="date" id="date-To" name="dateTo" onChange={onChange} value={inputDates.dateTo} />
+          <input type="date" id="date-To" name="dateTo" size={100} onChange={onChange} value={inputDates.dateTo} />
         </label>
 
         <button className="input" type="button" onClick={handleSubmit}> SUBMIT</button>
