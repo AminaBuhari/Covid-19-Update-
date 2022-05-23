@@ -42,7 +42,7 @@ const PickDate = () => {
           <input type="date" id="date-To" name="dateTo" onChange={onChange} value={inputDates.dateTo} />
         </label>
 
-        <button className="input" type="button" onClick={handleSubmit}> Submit</button>
+        <button className="input" type="button" onClick={handleSubmit}> SUBMIT</button>
       </div>
     </div>
   );
