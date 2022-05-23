@@ -55,7 +55,7 @@ ul {
   background-color: #bc2b54;
   padding: 15px 10px;
   justify-content: center;
-  gap: 5px;
+  gap: 1px;
 
   label {
     width: 100%;
@@ -149,11 +149,11 @@ ul {
   }
 
   #DateFrom {
-    width: 140px;
+    width: 100%;
   }
 
   #date-To {
-    width: 140px;
+    width: 100%;
   }
 
   .input {
