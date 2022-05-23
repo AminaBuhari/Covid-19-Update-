@@ -45,14 +45,20 @@ ul {
   }
 }
 
+.input:hover {
+  background-color: #e78caa;
+  cursor: pointer;
+}
+
 .inputData {
   display: flex;
-  gap: 10px;
   background-color: #bc2b54;
   padding: 15px 10px;
+  gap: 5px;
+  width: 100%;
 
   label {
-    width: 35%;
+    width: 100%;
     color: #fff;
     font-size: 18px;
   }
@@ -66,16 +72,18 @@ ul {
   }
 
   .input {
-    width: 28%;
+    width: 30%;
     height: 32px;
     background-color: white;
     border: 2px solid white;
     margin-top: 22px;
     border-radius: 5px;
     color: #4b1524;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
+    padding: 0 10px;
   }
+
 
 
   .globalButton {
@@ -84,11 +92,6 @@ ul {
     border-style: none;
     border: 2px solid white;
   }
-}
-
-button:focus {
-  color: #4b1524;
-  cursor: pointer;
 }
 
 .global-list {
